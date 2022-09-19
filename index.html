@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <style type="text/css">
+    	.owl-nav i {
+  font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+.owl-carousel .nav-btn{
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 100px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled{
+pointer-events: none;
+opacity: 0.2;
+}
+
+.owl-carousel .prev-slide{
+  background: url(nav-icon.png) no-repeat scroll 0 0;
+  left: -33px;
+}
+.owl-carousel .next-slide{
+  background: url(nav-icon.png) no-repeat scroll -24px 0px;
+  right: -33px;
+}
+.owl-carousel .prev-slide:hover{
+ background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover{
+background-position: -24px -53px;
+}  
+    </style>
+</head>
+<body>
+	<div>
+	<section class="navigation">
+  <div class="nav-container container">
+    <div class="brand text-dark">
+      <a class="text-dark" href="#!">Logo</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#!">Home</a>
+        </li>
+        <li>
+          <a href="#!">About</a>
+        </li>
+        <li>
+          <a href="#!">Product</a>
+          <ul class="navbar-dropdown">
+            <li>
+              <a href="#!">Mens</a>
+            </li>
+            <li>
+              <a href="#!">Womens</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">Blog</a>
+        </li>
+        <li>
+          <a href="#!">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="additional">
+    	<div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+    	<div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
+  </div>
+</section>
+<section class="hero-section ">
+	<div class="container hero-bg ">
+		<div class="row p-0">
+			<div class="col-md-6">
+				<div class="info">
+		<h1><span class="main-color">Sale 20% Off</span><br> On Everything</h1>
+		<p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi. </p>
+		<div class="cta-button"><a href="#">Shop Now</a></div>
+	</div>
+			</div>
+			<div class="col-md-6 m-0 p-0">
+				<div class="img-box">
+				</div>
+			</div>
+
+		</div>
+		<!-- <div class="row p-0 swiper-slide">
+			<div class="col-md-6">
+				<div class="info">
+		<h1><span class="main-color">Sale 20% Off</span><br> On Everything</h1>
+		<p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi. </p>
+		<div class="cta-button"><a href="#">Shop Now</a></div>
+	</div>
+			</div>
+			<div class="col-md-6 m-0 p-0">
+				<div class="img-box">
+				</div>
+			</div>
+
+		</div> -->
+	</div>
+	
+</section>
+<section class="about-us layout_padding">
+	<div class="why-shop mt-5">
+		<div class="container">
+			<div class="main-title pb-4">
+				<h1>Why Shop With Us</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-outer">
+						<div class="box-inner">
+							<div class="image-box">
+								<img src="assets/img/about-icon1.png" width="100%">
+							</div>
+							<div class="infomartion">
+								<h5 class="about-title">Fast Delivery</h5>
+								<p class="mb-0">variations of passages of Lorem Ipsum available</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-outer">
+						<div class="box-inner">
+							<div class="image-box">
+								<img src="assets/img/about-icon2.png" width="100%">
+							</div>
+							<div class="infomartion">
+								<h5 class="about-title">Free Shiping</h5>
+								<p class="mb-0">variations of passages of Lorem Ipsum available</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-outer">
+						<div class="box-inner">
+							<div class="image-box">
+								<img src="assets/img/about-icon3.png" width="100%">
+							</div>
+							<div class="infomartion">
+								<h5 class="about-title">Best Quality</h5>
+								<p class="mb-0">variations of passages of Lorem Ipsum available</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<section class="our-product layout_padding">
+	<div class="products">
+		<div class="container">
+			<div class="main-title pb-4">
+				<h1>Our Products</h1>
+			</div>
+		
+
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">ALL PRODUCTS</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">MENS</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">WOMENS</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+  	<div class="row mb-5 mt-5 top-gap">
+				<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f1.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<div class="add-to-cart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f2.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f3.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f4.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+			</div>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+  	<div class="row mb-4">
+				<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f5.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f6.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f7.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f8.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+			</div>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+  	<div class="row mb-4">
+				<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n1.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n2.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n3.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n4.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+			</div>
+  </div>
+</div>
+			
+			
+
+		</div>
+	</div>
+</section>
+<section class="news ">
+	<div class="news-background p-5">
+		<div class="offer-info">
+			<p>Repair Services</p>
+			<h2 class="news-text">Upto<span class="primary-color"> 70% off</span> - All t-Shirts & Accessories</h2>
+			<div class="cta-button mt-3"><a href="#!">Explore More</a></div>
+		</div>
+	</div>
+</section>
+<section class="top-categories layout_padding">
+	<div class="container mt-5">
+		<div class="main-title pb-4">
+				<h1>Top Categories</h1>
+			</div>
+			<div class="row mb-4 mt-5">
+				<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n1.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n2.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n3.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n4.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+			</div>
+
+	</div>
+</section>
+<section class="blog layout_padding">
+	<div class="latest-blog">
+		<div class="main-title pb-4">
+				<h1>Latest Blog</h1>
+			</div>
+		<div class="container">
+			<div class="row mt-5">
+				<div class="col-md-4">
+					<div class="card">
+                <img src="assets/img/1.png" class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-4 light-color">
+                    <div class="posted-by">
+                      <p class="mb-0"><i class="fa-regular fa-user pr-2"></i><span class="px-2">Virendra</span></p>
+                    </div>
+                    <div class="posted-date">
+                      <p class="mb-0"><i class="fa-regular fa-calendar-days"></i><span class="px-2">15 Aug, 2022</span></p>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold mt-3">Blog title here</h5>
+                  <p class="mb-0">Some quick example text to build on the card title and make.</p>
+                  <div class="cta-button"><a href="#!" class=" mt-3">Read More</a></div>
+                  
+                </div>
+              </div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+                <img src="assets/img/1.png" class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-4 light-color">
+                    <div class="posted-by">
+                      <p class="mb-0"><i class="fa-regular fa-user pr-2"></i><span class="px-2">Virendra</span></p>
+                    </div>
+                    <div class="posted-date">
+                      <p class="mb-0"><i class="fa-regular fa-calendar-days"></i><span class="px-2">15 Aug, 2022</span></p>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold mt-3">Blog title here</h5>
+                  <p class="mb-0">Some quick example text to build on the card title and make.</p>
+                  <div class="cta-button"><a href="#!" class=" mt-3">Read More</a></div>
+                  
+                </div>
+              </div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+                <img src="assets/img/1.png" class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-4 light-color">
+                    <div class="posted-by">
+                      <p class="mb-0"><i class="fa-regular fa-user pr-2"></i><span class="px-2">Virendra</span></p>
+                    </div>
+                    <div class="posted-date">
+                      <p class="mb-0"><i class="fa-regular fa-calendar-days"></i><span class="px-2">15 Aug, 2022</span></p>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold mt-3">Blog title here</h5>
+                  <p class="mb-0">Some quick example text to build on the card title and make.</p>
+                  <div class="cta-button"><a href="#!" class=" mt-3">Read More</a></div>
+                  
+                </div>
+              </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<section class="news-letter layout_padding">
+	<div class="letter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="letter-information">
+						<h1>Sign Up For Newsletter</h1>
+						<p>Get updates on E-mail about our latest-shop and <span class="offer-color">special offers.</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 position-relative">
+					<input type="email" placeholder="Enter your email">
+					<div class="cta-button-news">
+						<a href="#!">Sign Up</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-md-4">
+				<div>
+				<div class="logo-footer">
+					<a href="#!">
+						<h3>LOGO</h3>
+					</a>
+				</div>
+				<div class="footer-info">
+					<p>
+						<strong>ADDRESS:</strong>
+						 28 White tower, Street Name New York City, USA
+					</p>
+					<p>
+						<strong>TELEPHONE:</strong>
+						 +91 987 654 3210
+					</p>
+					<p>
+						<strong>EMAIL:</strong>
+						 yourmain@gmail.com
+					</p>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="widget_menu">
+									<h3>MENU</h3>
+									<ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Testimonial</a></li>
+                           <li><a href="#">Blog</a></li>
+                           <li><a href="#">Contact</a></li>
+                        </ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="widget_menu">
+									<h3>ACCOUNT</h3>
+									<ul>
+                           <li><a href="#">Account</a></li>
+                           <li><a href="#">Checkout</a></li>
+                           <li><a href="#">Login</a></li>
+                           <li><a href="#">Register</a></li>
+                           <li><a href="#">Shopping</a></li>
+                           <li><a href="#">Widget</a></li>
+                        </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="install-detail">
+									<h3>INSTALL APP</h3>
+									<p>From App Store or Play Store</p>
+									<div class="row pt-3 ">
+										<div class="col-md-6">
+											<div class="platform">
+												<a href="#!">
+												<img src= "assets/img/app.jpg">
+												</a>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="platform">
+												<a href="#!">
+												<img src= "assets/img/play.jpg">
+											</a>
+											</div>
+										</div>
+										<div class="payment-detail pt-3">
+										<p>Secured Payment Gateway</p>
+										<div class="row pt-3">
+											<div class="col-md-12">
+												<div class="payment-img">
+													<a href="#!">
+														<img src="assets/img/pay/pay.png" width="100%">
+													</a>
+												</div>
+											</div>
+											<!-- <div class="col-md-3"></div>
+											<div class="col-md-3"></div>
+											<div class="col-md-3"></div> -->
+										</div>
+									</div>
+									</div>
+								</div>
+					</div>
+
+				 </div>
+			</div>
+
+		</div>
+	</div>
+</footer>
+<section class="copyright">
+<div class="cpy_ footer-strip text-center py-3 border-top positon-absolute bottom-0">
+         <p class="mx-auto">Copyright © 2022. All right reserved.
+         
+         </p>
+      </div>
+ </section>
+</div>
+ <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/2724d12612.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script src="https://kit.fontawesome.com/06d43fc978.js" crossorigin="anonymous"></script>
+
+    <!-- <script type="text/javascript">
+    	$('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:30,
+    nav:true,
+    center:true,
+    dots:true,
+    autoplay:true,
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+    </script> -->
+</body>
+</html>
