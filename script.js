@@ -1,4 +1,6 @@
-	(function($) { 
+	$( document ).ready(function() {
+    console.log( "ready!" );
+
   $(function() { 
 
     //  open and close nav 
@@ -28,4 +30,31 @@
       $('.navbar-dropdown').hide();
     });
   }); 
-})(jQuery); 
+  $('.login-register-popup').hide();
+$('.login-icon').click(function(){
+  $('.login-register-popup').show();
+})
+$('.close-login-register-popup').click(function(){
+  $('.login-register-popup').hide();
+});
+
+
+
+      let searchBtn = document.querySelector('.search-icon');
+      let closeBtn = document.querySelector('.close-btn');
+      let searchBox = document.querySelector('.search-box');
+
+      searchBtn.onclick = function(){
+        searchBox.classList.add('active');
+        closeBtn.classList.add('active');
+        searchBtn.classList.add('active');
+        $('.nav-mobile').hide();
+      }
+      closeBtn.onclick = function(){
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+        $('.search-box input').val('');
+        $('.nav-mobile').show();
+      }
+});

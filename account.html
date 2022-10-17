@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+    <style type="text/css">
+        .owl-nav i {
+  font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+.owl-carousel .nav-btn{
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 100px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled{
+pointer-events: none;
+opacity: 0.2;
+}
+
+.owl-carousel .prev-slide{
+  background: url(nav-icon.png) no-repeat scroll 0 0;
+  left: -33px;
+}
+.owl-carousel .next-slide{
+  background: url(nav-icon.png) no-repeat scroll -24px 0px;
+  right: -33px;
+}
+.owl-carousel .prev-slide:hover{
+ background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover{
+background-position: -24px -53px;
+}  
+    </style>
+</head>
+
+<body>
+    <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="icon-arrow-up"></i></button> -->
+   
+
+    <!----------------account page---------------------->
+    <div class="login-register-popup" id="login-popup" style="display: block;">
+    <div class="row m-0">
+        <div class="col-lg-8 col-md-6 hide-on-mobile d-md-block d-sm-none p-0">
+            <div class="login-register-popup-left ">
+            </div>
+        </div>  
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 p-0 m-0" style="background-color: #211E1E;">
+            <div class="login-register-popup-right">
+                <div class="login-register-popup-right-inner">
+                <div class="login-popup-opt-section" style="">
+                    
+                    <div class="close-login-register-popup boadytext4">X</div>
+                    <div class="login-register-popup-right-logo pb-3">
+                    <a href="#!">    
+                    <img class="mb-4" src="assets/img/logo.png"></a>
+                    </div>
+                    
+                    <div class="login-title">Sign In</div>
+                    <div class="boadytext4 text-center py-4 text-center">Sign in to get started</div>
+                    <div class="new-input-box" id="opt-input">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" id="signiniEmail" autocomplete="off">
+                              <span class="omrs-input-label">Email</span>
+                              <div class="omrs-input-helper"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="errormessage text-center createAccount" style="display:none;">Create an account to Sign In.</span> 
+                    <div class="w-100 mt-3 cta-button"> <a href="#!" class="w-100 text-center">SIGN IN</a></div>
+                    <div class="boadytext4 text-center pt-3 show-login-with-password-section mb-2" role="button">or use Password instead</div>
+                    <div class="social-login">
+                    <button type="button">
+                        <div class="social-login-img-fb"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-twt"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-glg"></div>
+                    </button>
+                    </div>
+                    <div class="boadytext4 pt-3 text-center">Don’t have an account? <span role="button" class="register-me-now highlight-primary create-account-section">Create Account</span></div>
+                </div>
+                
+                <!-- forgot password popup start-->
+                <div class="forgot-password-section" style="display:none;">
+                    <div class="close-login-register-popup boadytext4">X</div>
+                    <div class="login-register-popup-right-logo pb-3">
+                    <a href="https://arsenal.reeble.io/arsenal_digital">    
+                    <img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    </div>
+                    
+                    
+                    <div class="boadytext4 text-center pb-4 text-center">Forgot Password</div>
+                    <div class="new-input-box" id="opt-input">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" id="forgotsigniniEmail" autocomplete="off">
+                              <span class="omrs-input-label">Email</span>
+                              <span style="display:flex;" class="omrs-input-helper reset-link-send-section-error"></span>
+                            </label>
+                            <span class="errormessage text-center resendEmail"></span>
+                        </div>
+                    </div>
+                    <!-- <span class="errormessage text-center loginmessagebox"></span>  -->
+                    <div class="cutsom-new-button-fill-new w-100 reset-link-send-section mt-5" onclick="ResetLoginPassword();">SEND RESET LINK</div>
+                </div>
+                <!-- forgot password popup start-->
+                
+                <!-- reset password link popup start-->
+                <div class="reset-password-link-section" style="display:none;">
+                     <div class="close-login-register-popup boadytext4">X</div>
+                    <div class="login-register-popup-right-logo pb-3">
+                    <a href="https://arsenal.reeble.io/arsenal_digital">    
+                    <img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    </div>
+                    
+                    
+                    <div class="boadytext4 text-center pb-4 text-center">Forgot Password</div>
+                    
+                    <div class="boadytext5 text-center pb-4 text-center my-3 enteredemailid" id="useremailtext">
+                        
+                    </div>
+                    <!-- <span class="errormessage text-center loginmessagebox"></span>  -->
+                    <div class="cutsom-new-button-fill-new w-100 sign-in-menu" id="signin">BACK TO LOGIN</div>
+                    
+                    
+                </div>
+                <!-- reset password link popup end-->
+                
+               <!-- new password set section start-->
+               
+               <div class="New-password-set-section" style="display:none;"> 
+                    <!-- <div class="close-login-register-popup boadytext4">X</div> -->
+                        <div class="login-register-popup-right-logo pb-3">
+                        <a href="https://arsenal.reeble.io/arsenal_digital"><img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    </div>
+                    
+                    <div class="boadytext4 text-center pb-4 text-center">Reset your password</div>
+                    <div class="new-input-box" id="opt-input">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" class="forgotnewPass" id="resetpassNew" type="password" autocomplete="off">
+                              <span class="omrs-input-label">Password</span>
+                              <i class="fas fa-eye-slash show-hide-resetpassNew" style="position: absolute;right: 6px; top: 24px;" id="eye"></i>
+                              <span class="omrs-input-helper"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="password-input-box mt-2">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" class="forgotnewPass" id="resetpasswordConfirm" type="password">
+                              <span class="omrs-input-label">Confirm Password</span>
+                              <i class="fas fa-eye-slash show-hide-forgot-pass" style="position: absolute;right: 6px; top: 24px;" id="eye"></i>
+                            </label>
+                        </div>
+                    </div> 
+                    <span class="errormessage text-center confirmReserpasswordErrorBox"></span> 
+                    <div id="password_rules_forgot_password" class="mb-3">
+                        <div class="boadytext4">Passwords must meet these requirements:</div>
+                        <ul>
+                            <li class="password_length">At least 8 characters</li>
+                            <li class="password_uppercase">At least 1 uppercase letter</li>
+                             <li class="password_lowercase">At least 1 lowercase letter</li>
+                              <li class="password_specialcharacter">At least 1 special character letter</li>
+                            <li class="password_number">at least one number</li>
+                            <li class="password_match">password and confirmation must match</li>
+                        </ul>
+                    </div>
+                    <button class="cutsom-new-button-fill-new w-100 toggle-disabled-button-confirm-reset" id="confirmResetForgotPassword" onclick="javascript:confirmResetPassword()">Confirm</button>
+                  
+                </div>
+                
+                 <div class="success-New-password-set-section" style="display:none;">   
+                    <!-- <div class="close-login-register-popup boadytext4">X</div> -->
+                        <div class="login-register-popup-right-logo pb-3 justify-content-center">
+                        <a href="https://arsenal.reeble.io/arsenal_digital"><img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    </div>
+                    
+                    <div class="boadytext4 text-center pb-4 text-center my-3" style="color:rgb(22, 219, 47);">Password reset successfully</div>
+                    <div class="password-success py-2">
+            
+            <div class="success-mssg-reset-pass d-flex justify-content-center">
+            <img src="/arsenal_digital/assets/img/web/success-uploaded.png" width="50px" class="my-4">
+            <!-- <div class="boadytext5">Password Reset Succesfully</div> -->
+            </div>
+            
+            </div>
+                    
+                    <div class="cutsom-new-button-fill-new w-100" id="empassignin" onclick="refreshPage()">Back To Home Page</div>
+                    <!-- <div class="otp-forgot-section">
+                    <div class="boadytext4 text-center pt-3 show-login-with-otp-section" role="button">or use OTP instead</div>
+                    <div class="boadytext5 text-center pt-3 show-forgot-password-section" role="button">Forgot Password?</div>
+                    </div> -->
+                    <!-- <div class="boadytext4 pt-3 text-center">Don’t have an account? <span role="button" class="register-me-now highlight-primary create-account-section">Register</span></div> -->
+                </div>
+               <!-- new password set section end -->
+
+
+                <!-- create password set section start-->
+               
+               <div class="create-New-password-set-section" style="display:none;">  
+                    <!-- <div class="close-login-register-popup boadytext4">X</div> -->
+                        <div class="login-register-popup-right-logo pb-3">
+                        <a href="https://arsenal.reeble.io/arsenal_digital">
+                            <!-- <img src="/arsenal_digital/assets/img/web/logo-white-1.png"> -->
+                        </a>
+                    </div>
+                    
+                    <div class="boadytext4 text-center pb-4 text-center">Create your password</div>
+                    <div class="new-input-box" id="opt-input">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" class="newPass" id="creatpassNew" type="password" autocomplete="off">
+                              <span class="omrs-input-label">Password</span>
+                              <i class="fas fa-eye-slash show-hide-creatpassNew" style="position: absolute;right: 6px; top: 24px;" id="eye"></i>
+                              <span class="omrs-input-helper"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="password-input-box mt-2">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" class="newPass" id="createpasswordConfirm" type="password">
+                              <span class="omrs-input-label">Confirm Password</span>
+                              <i class="fas fa-eye-slash show-hide-createpasswordConfirm" style="position: absolute;right: 6px; top: 24px;" id="eye"></i>
+                            </label>
+                        </div>
+                    </div> 
+                    <span class="errormessage text-center createpasswordErrorBox"></span>   
+                    <div id="password_rules_forgot_password" class="mb-3">
+                        <div class="boadytext4">Passwords must meet these requirements:</div>
+                        <ul>
+                            <li class="password_length">At least 8 characters</li>
+                            <li class="password_uppercase">At least 1 uppercase letter</li>
+                             <li class="password_lowercase">At least 1 lowercase letter</li>
+                              <li class="password_specialcharacter">At least 1 special character letter</li>
+                            <li class="password_number">at least one number</li>
+                            <li class="password_match">password and confirmation must match</li>
+                        </ul>
+                    </div>
+                    <button class="cutsom-new-button-fill-new w-100 toggle-disabled-button-confirm-reset" id="confirmCreatePassword" onclick="javascript:setPassword()">Confirm</button>
+                    <!-- <div class="otp-forgot-section">
+                    <div class="boadytext4 text-center pt-3 show-login-with-otp-section" role="button">or use OTP instead</div>
+                    <div class="boadytext5 text-center pt-3 show-forgot-password-section" role="button">Forgot Password?</div>
+                    </div> -->
+                    <!-- <div class="boadytext4 pt-3 text-center">Don’t have an account? <span role="button" class="register-me-now highlight-primary create-account-section">Register</span></div> -->
+                </div>
+                
+                <!--  <div class="success-New-password-set-section" style="display:none;">  
+                    <div class="close-login-register-popup boadytext4">X</div>
+                        <div class="login-register-popup-right-logo pb-3 justify-content-center">
+                        <a th:href="#{common.baseurl} + #{sidebar.homeurl}"><img th:src="@{/assets/img/web/logo-white-1.png}"></a>
+                    </div>
+                    
+                    <div class="boadytext4 text-center pb-4 text-center my-3" style="color:rgb(22, 219, 47);">Password reset successfully</div>
+                    <div class="password-success py-2">
+            
+            <div class="success-mssg-reset-pass d-flex justify-content-center">
+            <img th:src="@{/assets/img/web/success.png}" width="100px" class="mb-4">
+            <div class="boadytext5">Password Reset Succesfully</div>
+            </div>
+            
+            </div>
+                    
+                    <div class="cutsom-new-button-fill-new w-100" id="empassignin" onClick="refreshPage()">Back To Home Page</div>
+                    <div class="otp-forgot-section">
+                    <div class="boadytext4 text-center pt-3 show-login-with-otp-section" role="button">or use OTP instead</div>
+                    <div class="boadytext5 text-center pt-3 show-forgot-password-section" role="button">Forgot Password?</div>
+                    </div>
+                    <div class="boadytext4 pt-3 text-center">Don’t have an account? <span role="button" class="register-me-now highlight-primary create-account-section">Register</span></div>
+                </div> -->
+               <!-- create password set section end -->
+
+
+
+
+
+
+
+
+
+            <div class="login-popup-password-section" style="display: none;">   
+                    <div class="close-login-register-popup boadytext4">X</div>
+                        <div class="login-register-popup-right-logo pb-3">
+                    <a href="https://arsenal.reeble.io/arsenal_digital">    <img class="mb-4" src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    </div>
+                    
+                    <div class="text-1">Welcome back</div>
+                    <div class="boadytext4 text-center py-4 text-center">Sign in to get started</div>
+                    <div class="new-input-box" id="opt-input">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" id="emailpass" autocomplete="off">
+                              <span class="omrs-input-label">Email</span>
+                              <span class="omrs-input-helper"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="password-input-box mt-2">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" id="password" type="password">
+                              <span class="omrs-input-label">Password</span>
+                              <i style=" position: absolute;right: 6px;top: 24px;" class="fas fa-eye-slash show-hide-pass" id="eye"></i>
+                            </label>
+                        </div>
+                    </div> 
+                    <span class="errormessage text-center loginmessagebox"></span>  
+                    <div class="cutsom-new-button-fill-new w-100 make-disable-button mt-5" id="empassignin" onclick="LoginUsingPasword()">SIGN IN</div>
+                    <div class="otp-forgot-section">
+                    <div class="boadytext4 text-center pt-3 show-login-with-otp-section" role="button">or use OTP instead</div>
+                    <div class="boadytext5 text-center pt-3 show-forgot-password-section" role="button">Forgot Password?</div>
+                    </div>
+                    <div class="boadytext4 pt-3 text-center">Don’t have an account? <span role="button" class="register-me-now highlight-primary create-account-section">Create Account</span></div>
+                </div>
+            
+            <div class="login-otp-active-section" style="display: none;">
+                <div class="close-login-register-popup boadytext4">X</div>
+                    <div class="login-register-popup-right-logo pb-3">
+                    <a href="https://arsenal.reeble.io/arsenal_digital"><img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                </div>
+                <div class="boadytext4 highlight-primary pb-3 text-center">OTP Verification</div>
+                <div class="boadytext4 text-center pb-4 text-center">Please enter the One-Time Password sent on your email to verify.</div>
+                
+                <div class="row p-0 m-0">
+                <div id="otp" class="inputs d-flex flex-row justify-content-center m4-2"> 
+                <input class="m-2 text-center form-control rounded number required-otp-value" type="text" id="first" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"> 
+                <input class="m-2 text-center form-control rounded number required-otp-value" type="text" id="second" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"> 
+                <input class="m-2 text-center form-control rounded number required-otp-value" type="text" id="third" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"> 
+                <input class="m-2 text-center form-control rounded number required-otp-value" type="text" id="fourth" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"> 
+                <input class="m-2 text-center form-control rounded number required-otp-value" type="text" id="fifth" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"> 
+                <input class="m-2 text-center form-control rounded number required-otp-value" type="text" id="sixth" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"> 
+                </div>
+                <span id="opterror" class="errormessage boadytext6 text-center optLoginmessagebox mx-2" style="display:none;">Invalid Otp</span>
+                <!-- <span class="otperrormssg boadytext6 mt-1 text-center loginmessagebox" style="display:none;">Enter Valid Otp</span> -->    
+                <button class="cutsom-new-button-fill-new  full-width-button mt-4 verify-otp-button mt-5 toggle-disabled-otp-button" onclick="VerifyUser()" disabled="disabled">VERIFY</button>
+                </div>
+                <div class="resend-timer">
+                <span class="boadytext5 running-timer " style="margin-right:10px;" id="Timer">00:30</span>
+                  <button class="boadytext5 edit-cursor enable-after-sometime" onclick="Resendotp()">RESEND OTP</button>
+                   </div>
+                <!-- <input type="submit" class="boadytext4 text-right pt-3 edit-cursor enable-after-sometime btnLarge" value="RESEND OTP" name="submit" disabled> -->
+            </div>  
+                
+            <div class="register-popup-section" style="display: none;">
+                    <div class="close-login-register-popup boadytext4">X</div>
+                    <div class="login-register-popup-right-logo pb-3">
+                    <a href="https://arsenal.reeble.io/arsenal_digital">    <img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    </div>
+                    <div class="boadytext4 highlight-primary pb-3 text-center"></div>
+                    <div class="boadytext4 text-center pb-4 text-center">Create an account</div>
+                    <div class="new-input-box ">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" id="email" autocomplete="off">
+                              <span class="omrs-input-label">Email</span>
+                              <span class="omrs-input-helper"></span>
+                            </label>
+                        </div>
+                    </div>  
+                    <!-- <span class="errormessage text-center loginmessagebox create-acc-error"></span>     -->
+                    <span class="errormessage text-center userExistError" style="display:none;">An account with this email exists. Please Sign In.</span>
+                    <div class="cutsom-new-button-fill-new w-100 register-verify-otp-button mt-5 make-disable-button mb-3" id="requestotp">REQUEST OTP</div>
+                    <div class="boadytext4 text-center">OR</div>
+                    <div class="social-login ">
+                    <button type="button">
+                        <div class="social-login-img-fb"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-twt"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-glg"></div>
+                    </button>
+                    </div>
+                    <div class="boadytext5 text-center pt-3 create-page-text">By signing up, you agree to our
+                        <a href="https://arsenal.reeble.io/arsenal_digital/terms" class="create-redirect"> Terms of Service</a> and <a class="create-redirect" href="https://arsenal.reeble.io/arsenal_digital/privacy"> Privacy Policy.</a></div>
+                                <div class="boadytext4 pt-3 text-center">Already have an account?<span class="sign-in-menu" style="color:var(--primary);"> Sign In</span></div>
+                            </div>  
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+   
+    <!--footer-->
+  
+
+    <!-- JavaScript -->
+  
+
+     <script src="assets/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

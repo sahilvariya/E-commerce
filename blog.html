@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+    <style type="text/css">
+    	.owl-nav i {
+  font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+.owl-carousel .nav-btn{
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 100px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled{
+pointer-events: none;
+opacity: 0.2;
+}
+
+.owl-carousel .prev-slide{
+  background: url(nav-icon.png) no-repeat scroll 0 0;
+  left: -33px;
+}
+.owl-carousel .next-slide{
+  background: url(nav-icon.png) no-repeat scroll -24px 0px;
+  right: -33px;
+}
+.owl-carousel .prev-slide:hover{
+ background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover{
+background-position: -24px -53px;
+}  
+    </style>
+</head>
+<body>
+	<div>
+		<div class="login-register-popup" id="login-popup" style="display: none;">
+    <div class="row m-0">
+        <div class="col-lg-8 col-md-6 hide-on-mobile d-md-block d-sm-none p-0">
+            <div class="login-register-popup-left hide-on-mobile">
+            </div>
+        </div>  
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 p-0 m-0" style="background-color: #211E1E;">
+            <div class="login-register-popup-right">
+                <div class="login-register-popup-right-inner">
+                <div class="login-popup-opt-section" style="">
+                    
+                    <div class="close-login-register-popup boadytext4">X</div>
+                    <div class="login-register-popup-right-logo pb-3">
+                    <a href="#!">    
+                    <img class="mb-4" src="assets/img/logo.png">
+                  </a>
+                    </div>
+                    
+                    <div class="login-title">Sign In</div>
+                    <div class="boadytext4 text-center py-4 text-center">Sign in to get started</div>
+                    <div class="new-input-box" id="opt-input">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" id="signiniEmail" autocomplete="off">
+                              <span class="omrs-input-label">Email</span>
+                              <div class="omrs-input-helper"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="errormessage text-center createAccount" style="display:none;">Create an account to Sign In.</span> 
+                    <div class="w-100 mt-3 cta-button"> <a href="#!" class="w-100 text-center">SIGN IN</a></div>
+                    <div class="boadytext4 text-center pt-3 show-login-with-password-section mb-2" role="button">or use Social Login</div>
+                    <div class="social-login">
+                    <button type="button">
+                        <div class="social-login-img-fb"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-twt"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-glg"></div>
+                    </button>
+                    </div>
+                    <div class="boadytext4 pt-3 text-center">Don’t have an account? <span role="button" class="register-me-now highlight-primary create-account-section">Create Account</span></div>
+                </div>
+                     
+           			 <div class="register-popup-section" style="display: none;">
+                    <div class="close-login-register-popup boadytext4">X</div>
+                    <div class="login-register-popup-right-logo pb-3">
+                    <a href="https://arsenal.reeble.io/arsenal_digital">    <img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    </div>
+                    <div class="boadytext4 highlight-primary pb-3 text-center"></div>
+                    <div class="boadytext4 text-center pb-4 text-center">Create an account</div>
+                    <div class="new-input-box ">
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input required="" id="email" autocomplete="off">
+                              <span class="omrs-input-label">Email</span>
+                              <span class="omrs-input-helper"></span>
+                            </label>
+                        </div>
+                    </div>  
+                    <!-- <span class="errormessage text-center loginmessagebox create-acc-error"></span>     -->
+                    <span class="errormessage text-center userExistError" style="display:none;">An account with this email exists. Please Sign In.</span>
+                    <div class="cutsom-new-button-fill-new w-100 register-verify-otp-button mt-5 make-disable-button mb-3" id="requestotp">REQUEST OTP</div>
+                    <div class="boadytext4 text-center">OR</div>
+                    <div class="social-login ">
+                    <button type="button">
+                        <div class="social-login-img-fb"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-twt"></div>
+                    </button>
+                    <button type="button">
+                        <div class="social-login-img-glg"></div>
+                    </button>
+                    </div>
+                    <div class="boadytext5 text-center pt-3 create-page-text">By signing up, you agree to our
+                        <a href="https://arsenal.reeble.io/arsenal_digital/terms" class="create-redirect"> Terms of Service</a> and <a class="create-redirect" href="https://arsenal.reeble.io/arsenal_digital/privacy"> Privacy Policy.</a></div>
+                                <div class="boadytext4 pt-3 text-center">Already have an account?<span class="sign-in-menu" style="color:var(--primary);"> Sign In</span></div>
+                            </div>  
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+	<section class="navigation">
+  <div class="nav-container container">
+    <div class="brand text-dark">
+      <a class="text-dark" href="index.html">
+<img class="my-2" src="assets/img/logo.png">
+      </a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list m-0">
+        <li>
+          <a class="active" href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="#!">Category</a>
+          <ul class="p-0 navbar-dropdown">
+            <li>
+              <a href="#!">Mens</a>
+            </li>
+            <li>
+              <a href="#!">Womens</a>
+            </li>
+            <li>
+              <a href="#!">Kids</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="product.html">Products</a>
+        </li>
+        <li>
+          <a href="blog.html">Blog</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        
+      </ul>
+    </nav>
+    <div class="row justify-content-center align-items-center">
+      
+      
+      <div class="login-icon col-md-3">
+        <div>
+          <img src="assets/img/icons/user.png" width="25px">
+        </div>
+      </div>
+      <div class="cart col-md-3">
+        <div>
+          <img src="assets/img/icons/shopping-cart.png" width="25px">
+        </div>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search here...">
+      </div>
+      <div class="search-icon col-md-3">
+        <div>
+          <img src="assets/img/icons/search.png" width="25px">
+        </div>
+      </div>
+      <div class="close-btn col-md-3">
+        <div>
+          <img src="assets/img/icons/close.png" width="38px">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="about-us why-shop mb-5">
+	<div class="main-title-page">
+				<h1>Latest Blog</h1>
+			</div>
+			<section class="blog">
+	<div class="latest-blog">
+		<!-- <div class="main-title pb-4">
+				<h1>Latest Blog</h1>
+			</div> -->
+		<div class="container margin-top-bottom">
+			<div class="row mt-5">
+				<div class="col-md-4">
+					<div class="card">
+                <img src="assets/img/1.png" class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-4 light-color">
+                    <div class="posted-by">
+                      <p class="mb-0"><i class="fa-regular fa-user pr-2"></i><span class="px-2">Virendra</span></p>
+                    </div>
+                    <div class="posted-date">
+                      <p class="mb-0"><i class="fa-regular fa-calendar-days"></i><span class="px-2">15 Aug, 2022</span></p>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold mt-3">Blog title here</h5>
+                  <p class="mb-0">Some quick example text to build on the card title and make.</p>
+                  <div class="cta-button"><a href="#!" class=" mt-3">Read More</a></div>
+                  
+                </div>
+              </div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+                <img src="assets/img/1.png" class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-4 light-color">
+                    <div class="posted-by">
+                      <p class="mb-0"><i class="fa-regular fa-user pr-2"></i><span class="px-2">Virendra</span></p>
+                    </div>
+                    <div class="posted-date">
+                      <p class="mb-0"><i class="fa-regular fa-calendar-days"></i><span class="px-2">15 Aug, 2022</span></p>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold mt-3">Blog title here</h5>
+                  <p class="mb-0">Some quick example text to build on the card title and make.</p>
+                  <div class="cta-button"><a href="#!" class=" mt-3">Read More</a></div>
+                  
+                </div>
+              </div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+                <img src="assets/img/1.png" class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-4 light-color">
+                    <div class="posted-by">
+                      <p class="mb-0"><i class="fa-regular fa-user pr-2"></i><span class="px-2">Virendra</span></p>
+                    </div>
+                    <div class="posted-date">
+                      <p class="mb-0"><i class="fa-regular fa-calendar-days"></i><span class="px-2">15 Aug, 2022</span></p>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold mt-3">Blog title here</h5>
+                  <p class="mb-0">Some quick example text to build on the card title and make.</p>
+                  <div class="cta-button"><a href="#!" class=" mt-3">Read More</a></div>
+                  
+                </div>
+              </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+	
+</section>
+<footer>
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-md-4">
+				<div>
+				<div class="logo-footer">
+					<a href="#!">
+						<img class="mt-1 mb-3" src="assets/img/logo.png">
+					</a>
+				</div>
+				<div class="footer-info">
+					<p>
+						<strong>ADDRESS:</strong>
+						 28 White tower, Street Name New York City, USA
+					</p>
+					<p>
+						<strong>TELEPHONE:</strong>
+						 +91 987 654 3210
+					</p>
+					<p>
+						<strong>EMAIL:</strong>
+						 yourmain@gmail.com
+					</p>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="widget_menu">
+									<h3>MENU</h3>
+									<ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Testimonial</a></li>
+                           <li><a href="#">Blog</a></li>
+                           <li><a href="#">Contact</a></li>
+                        </ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="widget_menu">
+									<h3>ACCOUNT</h3>
+									<ul>
+                           <li><a href="#">Account</a></li>
+                           <li><a href="#">Checkout</a></li>
+                           <li><a href="#">Login</a></li>
+                           <li><a href="#">Register</a></li>
+                           <li><a href="#">Shopping</a></li>
+                           <li><a href="#">Widget</a></li>
+                        </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="install-detail">
+									<h3>INSTALL APP</h3>
+									<p>From App Store or Play Store</p>
+									<div class="row pt-3 ">
+										<div class="col-md-6">
+											<div class="platform">
+												<a href="#!">
+												<img src= "assets/img/app.jpg">
+												</a>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="platform">
+												<a href="#!">
+												<img src= "assets/img/play.jpg">
+											</a>
+											</div>
+										</div>
+										<div class="payment-detail pt-3">
+										<p>Secured Payment Gateway</p>
+										<div class="row pt-3">
+											<div class="col-md-12">
+												<div class="payment-img">
+													<a href="#!">
+														<img src="assets/img/pay/pay.png" width="100%">
+													</a>
+												</div>
+											</div>
+											<!-- <div class="col-md-3"></div>
+											<div class="col-md-3"></div>
+											<div class="col-md-3"></div> -->
+										</div>
+									</div>
+									</div>
+								</div>
+					</div>
+
+				 </div>
+			</div>
+
+		</div>
+	</div>
+</footer>
+<section class="copyright">
+<div class="cpy_ footer-strip text-center py-3 border-top positon-absolute bottom-0">
+         <p class="mx-auto">Copyright © 2022. All right reserved.
+         
+         </p>
+      </div>
+ </section>
+</div>
+ <script src="assets/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+    <!-- <script type="text/javascript">
+    	$('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:30,
+    nav:true,
+    center:true,
+    dots:true,
+    autoplay:true,
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+    </script> -->
+</body>
+</html>
