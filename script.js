@@ -48,13 +48,11 @@ $('.close-login-register-popup').click(function(){
         searchBox.classList.add('active');
         closeBtn.classList.add('active');
         searchBtn.classList.add('active');
-        $('.nav-mobile').hide();
       }
       closeBtn.onclick = function(){
         searchBox.classList.remove('active');
         closeBtn.classList.remove('active');
         searchBtn.classList.remove('active');
         $('.search-box input').val('');
-        $('.nav-mobile').show();
       }
 });
