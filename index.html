@@ -140,18 +140,17 @@ background-position: -24px -53px;
             </div>
         </div>      
     </div>
-	<section class="navigation">
-  <div class="nav-container container">
-    <div class="brand text-dark">
-      <a class="text-dark" href="index.html">
-<img class="my-2" src="assets/img/logo.png">
-      </a>
-    </div>
-    <nav>
-      <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
-      <ul class="nav-list m-0">
+	    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items m-0">
         <li>
-          <a class="active" href="index.html">Home</a>
+          <a  href="index.html" class="active">Home</a>
         </li>
         <li>
           <a href="about.html">About</a>
@@ -174,44 +173,65 @@ background-position: -24px -53px;
           <a href="product.html">Products</a>
         </li>
         <li>
-          <a href="blog.html">Blog</a>
+          <a  href="blog.html">Blog</a>
         </li>
         <li>
           <a href="contact.html">Contact</a>
         </li>
+         <li class="hide-on-desktop show-on-mobile">
+          <a href="#!">Search <span> <img src="assets/img/icons/search.png" style="padding-left:5px;" width="24px"></span></a>
+        </li>
         
       </ul>
-    </nav>
-    <div class="row justify-content-center align-items-center">
-    	
-    	
-    	<div class="login-icon hide-on-mobile col-md-3">
-    		<div>
-    			<img src="assets/img/icons/user.png" width="25px">
-    		</div>
-    	</div>
-    	<div class="cart hide-on-mobile col-md-3">
-    		<div>
-    			<img src="assets/img/icons/shopping-cart.png" width="25px">
-    		</div>
-    	</div>
-    	<div class="search-box">
-    		<input type="text" placeholder="Search here...">
-    	</div>
-    	<div class="search-icon hide-on-mobile col-md-3">
-    		<div>
-    			<img src="assets/img/icons/search.png" width="25px">
-    		</div>
-    	</div>
-    	<div class="close-btn  hide-on-mobile col-md-3">
-    		<div>
-    			<img src="assets/img/icons/close.png" width="38px">
-    		</div>
-    	</div>
-    	
+
+            <div class="logo">
+            	 <a class="text-dark" href="index.html">
+<img class="my-2" src="assets/img/logo.png" width="115px">
+      </a>
+            </div>
+             <div class="cart hide-on-desktop show-on-mobile position-absolute col-md-3" style="right:0;">
+        <div>
+          <img src="assets/img/icons/shopping-cart.png" width="25px">
+        </div>
+      </div>
+      <div class="login-icon hide-on-desktop show-on-mobile position-absolute col-md-3" style="right:50px;">
+        <div>
+          <img src="assets/img/icons/user.png" width="25px">
+        </div>
+      </div>
+
+
+
+            <div class="row justify-content-center align-items-center" style="order:3;">
+      
+      
+      <div class="login-icon hide-on-mobile col-md-3">
+        <div>
+          <img src="assets/img/icons/user.png" width="25px">
+        </div>
+      </div>
+      <div class="cart hide-on-mobile col-md-3">
+        <div>
+          <img src="assets/img/icons/shopping-cart.png" width="25px">
+        </div>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search here...">
+      </div>
+      <div class="search-icon hide-on-mobile col-md-3">
+        <div>
+          <img src="assets/img/icons/search.png" width="25px">
+        </div>
+      </div>
+      <div class="close-btn  hide-on-mobile col-md-3">
+        <div>
+          <img src="assets/img/icons/close.png" width="38px">
+        </div>
+      </div>
+      
     </div>
-  </div>
-</section>
+        </div>
+    </nav>
 <section class="hero-section ">
 	<div class="container hero-bg ">
 		<div class="row p-0">
@@ -771,7 +791,7 @@ background-position: -24px -53px;
 				<div class="row">
 					<div class="col-md-7">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-6 col-sm-6 col-6">
 								<div class="widget_menu">
 									<h3>MENU</h3>
 									<ul>
@@ -784,7 +804,7 @@ background-position: -24px -53px;
                         </ul>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6 col-sm-6 col-6">
 								<div class="widget_menu">
 									<h3>ACCOUNT</h3>
 									<ul>

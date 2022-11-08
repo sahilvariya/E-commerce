@@ -17,8 +17,200 @@ body{
 a {
     text-decoration: none;
 }
- .navigation {
-    /*position: fixed;*/
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    box-shadow: 0px 1px 10px 0px #aaa;
+    position: fixed!important;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    /*opacity: 0.85;*/
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    /*padding: 5px 20px;*/
+    color: #131313;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+.navbar .active {
+    color: #117964;
+}
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 25px;
+        width: 33px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        width: 220px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px!important;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        /*top: 10px;*/
+        left: 70px;
+        font-size: 2.5rem;
+        /*padding: ;*/
+    }
+    .logo img{
+        width: 100px!important;
+    }
+
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        /*display: none;*/
+    }
+}
+ /*.navigation {
+    
     display: block;
     top: 0;
     width: 100%;
@@ -28,12 +220,11 @@ a {
 }
 
  .brand {
-     /*position: absolute;*/
+  
      display: flex;
      justify-content: center;
      align-items: center;
      padding-left: 20px;
-     /*float: left;*/
      line-height: 55px;
      text-transform: uppercase;
      font-size: 1.4em;
@@ -49,7 +240,6 @@ a {
 }
 
  .nav-container {
-     /*max-width: 1000px;*/
      margin: 0 auto;
      display: flex;
      justify-content: space-between;
@@ -99,11 +289,11 @@ nav ul li a.active{
  nav ul li ul li a {
      padding: 15px;
      line-height: 20px;
-}
+}*/
 .search-box{
     position: absolute;
     right: -100%;
-    /*height: 100%;*/
+   
     width: 100%;
     display: flex;
     background: #fff;
@@ -478,7 +668,7 @@ form a{
     width: 100%;
     /*height: 90%;*/
     background: #D9E7E8;
-    padding:10px 0 0 0 ;
+    padding:80px 0 0 0 ;
     /*margin-top: 75px;*/
 
 }
@@ -561,6 +751,7 @@ color: var(--primary);
         background: var(--primary);
     padding: 60px;
     color: #fff;
+    padding-top: 135px;
 }
 .main-title-page h1{
         position: relative;
@@ -847,39 +1038,29 @@ footer{
     body{
      overflow-x: hidden!important;
 }
-     nav {
-         width: 100%;
-         padding: 35px 0 15px;
-    }
-     nav ul {
-         display: none;
-    }
-     nav ul li {
-         float: none;
-         display: block;
-    }
-     nav ul li a {
-         padding: 15px;
-         line-height: 20px;
-         /*background: #262626;*/
-    }
-     nav ul li ul li a {
-         padding-left: 30px;
-    }
-     .navbar-dropdown {
-         position: static;
-}
-    .navigation{
-    padding: 0;
-}
-    .brand{
-        position: absolute;
-    top: 10px;
-}
+  
     .additional{
     display: none;
 }
     .hide-on-mobile{
+        display: none;
+    }
+    .search-box{
+        display: none;
+    }
+    .footer-info{
+        margin-bottom: 45px;
+    }.install-detail{
+        margin-top: 40px;
+        text-align: center;
+    }
+    footer{
+        text-align: center;
+    }
+    .platform{
+        margin-bottom: 15px;
+    }
+    .img-box{
         display: none;
     }
     .show-on-mobile{
@@ -1064,7 +1245,20 @@ input:focus{
     margin-right: 10px;
     border: 1px solid var(--primary);
 }
-
+.black-overlay{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    opacity: 0.5;
+    top: 0;
+    z-index: 99;
+    /*display: none;*/
+}
 
 
 .hide-on-desktop{display: none;}
+
+
+
+

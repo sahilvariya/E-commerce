@@ -140,21 +140,20 @@ background-position: -24px -53px;
             </div>
         </div>      
     </div>
-	<section class="navigation">
-  <div class="nav-container container">
-    <div class="brand text-dark">
-      <a class="text-dark" href="index.html">
-<img class="my-2" src="assets/img/logo.png">
-      </a>
-    </div>
-    <nav>
-      <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
-      <ul class="nav-list m-0">
+	<nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items m-0">
         <li>
           <a  href="index.html">Home</a>
         </li>
         <li>
-          <a href="about.html">About</a>
+          <a href="about.html" >About</a>
         </li>
         <li>
           <a href="#!">Category</a>
@@ -179,10 +178,31 @@ background-position: -24px -53px;
         <li>
           <a href="contact.html">Contact</a>
         </li>
+         <li class="hide-on-desktop show-on-mobile">
+          <a href="#!">Search <span> <img src="assets/img/icons/search.png" style="padding-left:5px;" width="24px"></span></a>
+        </li>
         
       </ul>
-    </nav>
-    <div class="row justify-content-center align-items-center">
+
+            <div class="logo">
+               <a class="text-dark" href="index.html">
+<img class="my-2" src="assets/img/logo.png" width="115px">
+      </a>
+            </div>
+             <div class="cart hide-on-desktop show-on-mobile position-absolute col-md-3" style="right:0;">
+        <div>
+          <img src="assets/img/icons/shopping-cart.png" width="25px">
+        </div>
+      </div>
+      <div class="login-icon hide-on-desktop show-on-mobile position-absolute col-md-3" style="right:50px;">
+        <div>
+          <img src="assets/img/icons/user.png" width="25px">
+        </div>
+      </div>
+
+
+
+            <div class="row justify-content-center align-items-center" style="order:3;">
       
       
       <div class="login-icon hide-on-mobile col-md-3">
@@ -210,8 +230,8 @@ background-position: -24px -53px;
       </div>
       
     </div>
-  </div>
-</section>
+        </div>
+    </nav>
 <section class="about-us why-shop mb-5">
 	<div class="main-title-page">
 				<h1>Latest Blog</h1>
@@ -288,39 +308,39 @@ background-position: -24px -53px;
 	
 </section>
 <footer>
-	<div class="container">
-		<div class="row mb-4">
-			<div class="col-md-4">
-				<div>
-				<div class="logo-footer">
-					<a href="#!">
-						<img class="mt-1 mb-3" src="assets/img/logo.png">
-					</a>
-				</div>
-				<div class="footer-info">
-					<p>
-						<strong>ADDRESS:</strong>
-						 28 White tower, Street Name New York City, USA
-					</p>
-					<p>
-						<strong>TELEPHONE:</strong>
-						 +91 987 654 3210
-					</p>
-					<p>
-						<strong>EMAIL:</strong>
-						 yourmain@gmail.com
-					</p>
-				</div>
-			</div>
-			</div>
-			<div class="col-md-8">
-				<div class="row">
-					<div class="col-md-7">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="widget_menu">
-									<h3>MENU</h3>
-									<ul>
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div>
+        <div class="logo-footer">
+          <a href="#!">
+            <img class="mt-1 mb-3" src="assets/img/logo.png">
+          </a>
+        </div>
+        <div class="footer-info">
+          <p>
+            <strong>ADDRESS:</strong>
+             28 White tower, Street Name New York City, USA
+          </p>
+          <p>
+            <strong>TELEPHONE:</strong>
+             +91 987 654 3210
+          </p>
+          <p>
+            <strong>EMAIL:</strong>
+             yourmain@gmail.com
+          </p>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-6">
+                <div class="widget_menu">
+                  <h3>MENU</h3>
+                  <ul>
                            <li><a href="#">Home</a></li>
                            <li><a href="#">About</a></li>
                            <li><a href="#">Services</a></li>
@@ -328,12 +348,12 @@ background-position: -24px -53px;
                            <li><a href="#">Blog</a></li>
                            <li><a href="#">Contact</a></li>
                         </ul>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="widget_menu">
-									<h3>ACCOUNT</h3>
-									<ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-6">
+                <div class="widget_menu">
+                  <h3>ACCOUNT</h3>
+                  <ul>
                            <li><a href="#">Account</a></li>
                            <li><a href="#">Checkout</a></li>
                            <li><a href="#">Login</a></li>
@@ -341,53 +361,53 @@ background-position: -24px -53px;
                            <li><a href="#">Shopping</a></li>
                            <li><a href="#">Widget</a></li>
                         </ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-5">
-						<div class="install-detail">
-									<h3>INSTALL APP</h3>
-									<p>From App Store or Play Store</p>
-									<div class="row pt-3 ">
-										<div class="col-md-6">
-											<div class="platform">
-												<a href="#!">
-												<img src= "assets/img/app.jpg">
-												</a>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="platform">
-												<a href="#!">
-												<img src= "assets/img/play.jpg">
-											</a>
-											</div>
-										</div>
-										<div class="payment-detail pt-3">
-										<p>Secured Payment Gateway</p>
-										<div class="row pt-3">
-											<div class="col-md-12">
-												<div class="payment-img">
-													<a href="#!">
-														<img src="assets/img/pay/pay.png" width="100%">
-													</a>
-												</div>
-											</div>
-											<!-- <div class="col-md-3"></div>
-											<div class="col-md-3"></div>
-											<div class="col-md-3"></div> -->
-										</div>
-									</div>
-									</div>
-								</div>
-					</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="install-detail">
+                  <h3>INSTALL APP</h3>
+                  <p>From App Store or Play Store</p>
+                  <div class="row pt-3 ">
+                    <div class="col-md-6">
+                      <div class="platform">
+                        <a href="#!">
+                        <img src= "assets/img/app.jpg">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="platform">
+                        <a href="#!">
+                        <img src= "assets/img/play.jpg">
+                      </a>
+                      </div>
+                    </div>
+                    <div class="payment-detail pt-3">
+                    <p>Secured Payment Gateway</p>
+                    <div class="row pt-3">
+                      <div class="col-md-12">
+                        <div class="payment-img">
+                          <a href="#!">
+                            <img src="assets/img/pay/pay.png" width="100%">
+                          </a>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-3"></div>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-3"></div> -->
+                    </div>
+                  </div>
+                  </div>
+                </div>
+          </div>
 
-				 </div>
-			</div>
+         </div>
+      </div>
 
-		</div>
-	</div>
+    </div>
+  </div>
 </footer>
 <section class="copyright">
 <div class="cpy_ footer-strip text-center py-3 border-top positon-absolute bottom-0">

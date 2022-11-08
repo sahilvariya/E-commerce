@@ -48,6 +48,7 @@ $('.close-login-register-popup').click(function(){
         searchBox.classList.add('active');
         closeBtn.classList.add('active');
         searchBtn.classList.add('active');
+        // searchBox.style.display="block";
       }
       closeBtn.onclick = function(){
         searchBox.classList.remove('active');
