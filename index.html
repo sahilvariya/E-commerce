@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
     <style type="text/css">
-    	.owl-nav i {
+/*    	.owl-nav i {
   font-size: 52px;
 }
 
@@ -49,7 +49,7 @@ opacity: 0.2;
 }
 .owl-carousel .next-slide:hover{
 background-position: -24px -53px;
-}  
+} */ 
     </style>
 </head>
 <body>
@@ -103,7 +103,9 @@ background-position: -24px -53px;
            			 <div class="register-popup-section" style="display: none;">
                     <div class="close-login-register-popup boadytext4">X</div>
                     <div class="login-register-popup-right-logo pb-3">
-                    <a href="https://arsenal.reeble.io/arsenal_digital">    <img src="/arsenal_digital/assets/img/web/logo-white-1.png"></a>
+                    <a href="https://arsenal.reeble.io/arsenal_digital">   
+                     <!-- <img src="/arsenal_digital/assets/img/web/logo-white-1.png"> -->
+                   </a>
                     </div>
                     <div class="boadytext4 highlight-primary pb-3 text-center"></div>
                     <div class="boadytext4 text-center pb-4 text-center">Create an account</div>
@@ -155,18 +157,18 @@ background-position: -24px -53px;
         <li>
           <a href="about.html">About</a>
         </li>
-        <li>
-          <a href="#!">Category</a>
-          <ul class="p-0 navbar-dropdown">
+       <li>
+          <a class=" category-angle" href="#!">Category <span><i class="fa-solid fa-angle-down" style="padding-left: 3px;font-size: 18px;"></i></span></a>
+          <ul class="p-4 navbar-dropdown">
             <li>
-              <a href="#!">Mens</a>
+              <a href="category.html" class="mens-drop">Mens</a>
             </li>
             <li>
-              <a href="#!">Womens</a>
+              <a href="category.html" class="mens-drop">Womens</a>
             </li>
-            <li>
-              <a href="#!">Kids</a>
-            </li>
+            <!-- <li>
+              <a href="#!" class="mens-drop">Kids</a>
+            </li> -->
           </ul>
         </li>
         <li>
@@ -234,7 +236,10 @@ background-position: -24px -53px;
     </nav>
 <section class="hero-section ">
 	<div class="container hero-bg ">
-		<div class="row p-0">
+		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <div class="row p-0">
 			<div class="col-md-6">
 				<div class="info">
 		<h1><span class="main-color">Sale 20% Off</span><br> On Everything</h1>
@@ -248,7 +253,9 @@ background-position: -24px -53px;
 			</div>
 
 		</div>
-		<!-- <div class="row p-0 swiper-slide">
+    </div>
+    <div class="carousel-item">
+     <div class="row p-0">
 			<div class="col-md-6">
 				<div class="info">
 		<h1><span class="main-color">Sale 20% Off</span><br> On Everything</h1>
@@ -261,8 +268,36 @@ background-position: -24px -53px;
 				</div>
 			</div>
 
-		</div> -->
+		</div>
+    </div>
+    <div class="carousel-item">
+     <div class="row p-0">
+			<div class="col-md-6">
+				<div class="info">
+		<h1><span class="main-color">Sale 20% Off</span><br> On Everything</h1>
+		<p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi. </p>
+		<div class="cta-button"><a href="#">Shop Now</a></div>
 	</div>
+			</div>
+			<div class="col-md-6 m-0 p-0">
+				<div class="img-box">
+				</div>
+			</div>
+
+		</div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+	</div>
+	
 	
 </section>
 <section class="about-us layout_padding">
@@ -334,10 +369,13 @@ background-position: -24px -53px;
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
   	<div class="row mb-5 mt-5 top-gap">
-				<div class="col-md-3">
+				
+				
+				
+					<div class="col-md-3">
 					<div class="product-box">
 						<div class="product-image">
-							<img src="assets/img/product/f1.jpg" width="100%">
+							<img src="assets/img/product/n1.jpg" width="100%">
 						</div>
 						<div class="product-info">
 							<p class="mb-1 mt-4 company-name">adidas</p>
@@ -350,13 +388,13 @@ background-position: -24px -53px;
 								<img src="assets/img/star-icon.png">
 							</div>
 							<div class="product-price">$78</div>
-							<div class="add-to-cart"></div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3"><div class="product-box">
 						<div class="product-image">
-							<img src="assets/img/product/f2.jpg" width="100%">
+							<img src="assets/img/product/n2.jpg" width="100%">
 						</div>
 						<div class="product-info">
 							<p class="mb-1 mt-4 company-name">adidas</p>
@@ -372,9 +410,29 @@ background-position: -24px -53px;
 							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
 						</div>
 					</div></div>
+					<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/n3.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div>
+				</div>
 				<div class="col-md-3"><div class="product-box">
 						<div class="product-image">
-							<img src="assets/img/product/f3.jpg" width="100%">
+							<img src="assets/img/product/n4.jpg" width="100%">
 						</div>
 						<div class="product-info">
 							<p class="mb-1 mt-4 company-name">adidas</p>
@@ -389,29 +447,8 @@ background-position: -24px -53px;
 							<div class="product-price">$78</div>
 							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
 						</div>
-					</div></div>
-				<div class="col-md-3"><div class="product-box">
-						<div class="product-image">
-							<img src="assets/img/product/f4.jpg" width="100%">
-						</div>
-						<div class="product-info">
-							<p class="mb-1 mt-4 company-name">adidas</p>
-							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
-							<div class="stars">
-								<img src="assets/img/star-icon.png">
-								<img src="assets/img/star-icon.png">
-								<img src="assets/img/star-icon.png">
-								<img src="assets/img/star-icon.png">
-								<img src="assets/img/star-icon.png">
-							</div>
-							<div class="product-price">$78</div>
-							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
-						</div>
-					</div></div>
-			</div>
-  </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-  	<div class="row mb-4">
+					</div>
+				</div>
 				<div class="col-md-3">
 					<div class="product-box">
 						<div class="product-image">
@@ -488,7 +525,7 @@ background-position: -24px -53px;
 					</div></div>
 			</div>
   </div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
   	<div class="row mb-4">
 				<div class="col-md-3">
 					<div class="product-box">
@@ -568,6 +605,84 @@ background-position: -24px -53px;
 					</div></div>
 			</div>
   </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+			<div class="row mb-4">
+				<div class="col-md-3">
+					<div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f5.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f6.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f7.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				<div class="col-md-3"><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f8.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+			</div>
+  </div>
 </div>
 			
 			
@@ -589,11 +704,12 @@ background-position: -24px -53px;
 		<div class="main-title pb-4">
 				<h1>Our Products</h1>
 			</div>
-			<div class="row mb-4 mt-5">
-				<div class="col-md-3">
+			<div class="mb-4 mt-5">
+				<div class="owl-carousel owl-theme" id="owl-home-section-three" style="padding: 0 15px;">
+				<div class="">
 					<div class="product-box">
 						<div class="product-image">
-							<img src="assets/img/product/n1.jpg" width="100%">
+							<img src="assets/img/product/f1.jpg" width="100%">
 						</div>
 						<div class="product-info">
 							<p class="mb-1 mt-4 company-name">adidas</p>
@@ -610,9 +726,9 @@ background-position: -24px -53px;
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3"><div class="product-box">
+				<div class=""><div class="product-box">
 						<div class="product-image">
-							<img src="assets/img/product/n2.jpg" width="100%">
+							<img src="assets/img/product/f2.jpg" width="100%">
 						</div>
 						<div class="product-info">
 							<p class="mb-1 mt-4 company-name">adidas</p>
@@ -628,10 +744,10 @@ background-position: -24px -53px;
 							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
 						</div>
 					</div></div>
-				<div class="col-md-3">
+				<div class="">
 					<div class="product-box">
 						<div class="product-image">
-							<img src="assets/img/product/n3.jpg" width="100%">
+							<img src="assets/img/product/f3.jpg" width="100%">
 						</div>
 						<div class="product-info">
 							<p class="mb-1 mt-4 company-name">adidas</p>
@@ -648,9 +764,9 @@ background-position: -24px -53px;
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3"><div class="product-box">
+				<div class=""><div class="product-box">
 						<div class="product-image">
-							<img src="assets/img/product/n4.jpg" width="100%">
+							<img src="assets/img/product/f4.jpg" width="100%">
 						</div>
 						<div class="product-info">
 							<p class="mb-1 mt-4 company-name">adidas</p>
@@ -666,6 +782,61 @@ background-position: -24px -53px;
 							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
 						</div>
 					</div></div>
+					<div class=""><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f5.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+					<div class=""><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f6.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+					<div class=""><div class="product-box">
+						<div class="product-image">
+							<img src="assets/img/product/f7.jpg" width="100%">
+						</div>
+						<div class="product-info">
+							<p class="mb-1 mt-4 company-name">adidas</p>
+							<h5 class="product-name m-0">Cartoon Astronauts Shirt</h5>
+							<div class="stars">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+								<img src="assets/img/star-icon.png">
+							</div>
+							<div class="product-price">$78</div>
+							<!-- <div class="add-to-cart"><i class="fa-regular fa-cart-shopping"></i></div> -->
+						</div>
+					</div></div>
+				</div>
 			</div>
 
 	</div>
@@ -795,12 +966,12 @@ background-position: -24px -53px;
 								<div class="widget_menu">
 									<h3>MENU</h3>
 									<ul>
-                           <li><a href="#">Home</a></li>
-                           <li><a href="#">About</a></li>
-                           <li><a href="#">Services</a></li>
-                           <li><a href="#">Testimonial</a></li>
-                           <li><a href="#">Blog</a></li>
-                           <li><a href="#">Contact</a></li>
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="about.html">About</a></li>
+                           <li><a href="category.html">Category</a></li>
+                           <li><a href="product.html">Product</a></li>
+                           <li><a href="blog.html">Blog</a></li>
+                           <li><a href="contact.html">Contact</a></li>
                         </ul>
 								</div>
 							</div>
@@ -876,28 +1047,30 @@ background-position: -24px -53px;
 <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 
-    <!-- <script type="text/javascript">
-    	$('.owl-carousel').owlCarousel({
-    loop:false,
-    margin:30,
-    nav:true,
-    center:true,
-    dots:true,
-    autoplay:true,
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-    </script> -->
+   <script type="text/javascript">
+    	$('#owl-home-section-three').owlCarousel({
+            stagePadding: 80,
+            loop:false,
+            margin:17,
+            nav: true,
+            dots:true,
+            dotsEach: false,
+            items:3, 
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:3
+                }
+            }
+
+        });
+    </script> 
     <script type="text/javascript">
 
     </script>

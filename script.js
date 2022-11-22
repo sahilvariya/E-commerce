@@ -56,4 +56,14 @@ $('.close-login-register-popup').click(function(){
         searchBtn.classList.remove('active');
         $('.search-box input').val('');
       }
+
+// $('.mens-drop').click(function(){
+//   window.location.hash = "mens"
+//   window.location.href = "category.html"
+
+// })<i class="fa-regular fa-angle-up"></i>
+$('.category-angle').click(function(){
+  $('.category-angle span i').toggleClass('fa-regular fa-angle-up')
+})
+
 });
